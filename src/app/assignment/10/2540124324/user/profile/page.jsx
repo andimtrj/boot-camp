@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { auth } from "@/lib/firebase";
+import { auth } from "../../firebase/config";
 import { useRouter } from "next/navigation";
 
 export default function UserProfile() {

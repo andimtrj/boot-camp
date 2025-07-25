@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
-import { auth, db } from "@/lib/firebase";
+import { auth, db } from "../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
+  const router  = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,6 +23,7 @@ export default function RegisterPage() {
       });
 
       alert("Registration successful! You can now login.");
+      router.push('/assignment/10/2540124324/login')
     } catch (err) {
       alert("Registration failed: " + err.message);
     }

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { auth, db } from "@/lib/firebase";
+import { auth, db } from "../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "next/navigation";
@@ -20,9 +20,9 @@ export default function LoginPage() {
       const role = userDoc.data()?.role;
 
       if (role === "admin") {
-        router.push("/admin/dashboard");
+        router.push("/assignment/10/2540124324/admin/dashboard");
       } else {
-        router.push("/user/profile");
+        router.push("/assignment/10/2540124324/user/profile");
       }
     } catch (err) {
       alert("Login failed: " + err.message);
