@@ -88,7 +88,7 @@ export default function HomePage() {
 
   return (
     <div className={`container ${settings.theme === "dark" ? "dark" : ""}`}>
-      <h1>📋 Task Manager</h1>
+      <h1>📋 Task Manager | Manage your Tasks Here</h1>
 
       {/* Language & Theme Controls */}
       <div className="controls">
